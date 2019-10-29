@@ -40,6 +40,33 @@ print wordsfunction('Velnias blemba kazkoks asilas sudas gaidys ne taip');
 
 //--------------------------//
 
+class animal
+{
+    public $earlength = 10;
+    public $type = '';
+    public $region = '';
+
+    public function __construct($earlength, $type, $region)
+    {
+        $this->earlength = $earlength;
+        $this->type = $type;
+        $this->region = $region;
+    }
+
+    public function voice()
+    {
+        print "My ear length is $this->earlength type:
+        $this->type and I am from region $this->region";
+    }
+}
+
+$pigeon = new animal(3, "bird", "eastern europe");
+
+print $pigeon->voice();
+
+
+//--------------------------//
+
 ?>
 
 <!DOCTYPE html>
