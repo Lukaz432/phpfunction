@@ -1,0 +1,11 @@
+head {
+  width: 70vh;
+}
+body {
+  width: 70vh;
+}
+
+.bg-img, img {
+  height: 70vh;
+  width: 70vh;
+}
