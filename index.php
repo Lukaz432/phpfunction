@@ -1,12 +1,14 @@
 <?php
+
 //--------------------------//
 
-function lyginisNelyginis($skaicius) {
-  if ($skaicius % 2 == 0){
-  print ' Lyginis ';
-}else {
-  print ' Nelyginis ';
-}
+function lyginisNelyginis($skaicius)
+{
+    if ($skaicius % 2 == 0) {
+        print ' Lyginis ';
+    } else {
+        print ' Nelyginis ';
+    }
 }
 
 lyginisNelyginis(2);
@@ -16,10 +18,26 @@ lyginisNelyginis(3);
 
 function saknis($skaicius)
 {
-  print sqrt($skaicius);
+    print sqrt($skaicius);
 }
 
 saknis(9);
+//--------------------------//
+
+
+function wordsfunction($text)
+{
+    $badWords = ['Velnias', 'blemba', 'sudas', 'asilas', 'gaidys'];
+    foreach ($badWords as $badword) {
+        $text = str_replace($badword, '***', $text);
+    }
+
+    return $text;
+}
+
+print wordsfunction('Velnias blemba kazkoks asilas sudas gaidys ne taip');
+
+
 //--------------------------//
 
 ?>
@@ -38,6 +56,7 @@ saknis(9);
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
     <!-- script -->
