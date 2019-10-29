@@ -13,6 +13,15 @@ lyginisNelyginis(2);
 lyginisNelyginis(3);
 
 //--------------------------//
+
+function saknis($skaicius)
+{
+  print sqrt($skaicius);
+}
+
+saknis(9);
+//--------------------------//
+
 ?>
 
 <!DOCTYPE html>
