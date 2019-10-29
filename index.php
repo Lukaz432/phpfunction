@@ -1,71 +1,26 @@
-<?php
-
-//--------------------------//
-
-function lyginisNelyginis($skaicius)
-{
-    if ($skaicius % 2 == 0) {
-        print ' Lyginis ';
-    } else {
-        print ' Nelyginis ';
-    }
-}
-
-lyginisNelyginis(2);
-lyginisNelyginis(3);
-
-//--------------------------//
-
-function saknis($skaicius)
-{
-    print sqrt($skaicius);
-}
-
-saknis(9);
-//--------------------------//
-
-
-function wordsfunction($text)
-{
-    $badWords = ['Velnias', 'blemba', 'sudas', 'asilas', 'gaidys'];
-    foreach ($badWords as $badword) {
-        $text = str_replace($badword, '***', $text);
-    }
-
-    return $text;
-}
-
-print wordsfunction('Velnias blemba kazkoks asilas sudas gaidys ne taip');
-
+<?php 
 
 //--------------------------//
 
 class animal
 {
-    public $earlength = 10;
-    public $type = '';
-    public $region = '';
-
-    public function __construct($earlength, $type, $region)
-    {
-        $this->earlength = $earlength;
-        $this->type = $type;
-        $this->region = $region;
-    }
-
     public function voice()
     {
-        print "My ear length is $this->earlength type:
-        $this->type and I am from region $this->region";
+        return ' :zzz ';
+    }
+}
+class human
+{
+    public function stroke($animal)
+    {
+        return "just stroked" . $animal->voice();
     }
 }
 
-$pigeon = new animal(3, "bird", "eastern europe");
 
-print $pigeon->voice();
-
-
-//--------------------------//
+$animal = new animal();
+$human = new human();
+print $human->stroke($animal);
 
 ?>
 
